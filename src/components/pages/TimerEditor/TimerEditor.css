@@ -1,0 +1,31 @@
+.TimerEditor {
+  /* background-color: #1a1f23; */
+  /* background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0) 40%),
+    #1a1f23; */
+
+  background: linear-gradient(rgba(0, 0, 0, 0.9) 30%, #1a1f23 45% 50%, rgba(0, 0, 0, 0.9) 70%),
+  #1a1f23;;
+  width: 270px;
+  height: 290px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.TimeScrollPicker {
+  display: flex;
+  justify-content: center;
+  height: 75%;
+}
+
+.ButtonPanelCenter {
+  display: flex;
+  justify-content: center;
+  padding: 0 25px 0 25px;
+  margin-bottom: 10px;
+}
+
+.TopPanel {
+  padding-left: 20px;
+  margin-top: 5px;
+}

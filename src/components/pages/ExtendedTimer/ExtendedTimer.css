@@ -1,0 +1,26 @@
+.ExtendedTimer {
+  background-color: #1a1f23;
+  width: 270px;
+  height: 290px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.TimerCircle {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.ButtonPanel {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 25px 0 25px;
+  margin-bottom: 20px;
+}
+
+.TopPanel {
+  padding-left: 20px;
+  margin-top: 10px;
+}

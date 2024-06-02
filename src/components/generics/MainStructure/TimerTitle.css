@@ -1,0 +1,14 @@
+.TimerTitle {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.Time {
+    margin-bottom: -4px;
+    align-self: center;
+}
+
+.TotalTime {
+    font-size: 5px;
+}

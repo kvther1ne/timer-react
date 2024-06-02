@@ -1,0 +1,22 @@
+/* .picker-container .picker-highlight:after,
+.picker-container .picker-highlight:before {
+  background-color: transparent;
+}
+
+.picker-container .picker-inner {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.8em;
+}
+
+.picker-container .picker-column .picker-item {
+  color: #cccccc;
+}
+
+.picker-container .picker-column .picker-item.picker-item-selected {
+  font-size: 1.4em;
+} */
+
+.TimePicker {
+  width: 60%;
+}
+

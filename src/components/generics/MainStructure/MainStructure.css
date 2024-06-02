@@ -1,0 +1,18 @@
+.MainStructure {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    height: 100%; 
+    overflow: auto;  
+}
+
+.MainStructure::-webkit-scrollbar {
+    display: none; /* for Chrome, Safari, and Opera */
+  }
+
+.line {
+    display: block;
+    border: none;           
+    border-top: 1px solid #484C4F; 
+    margin: 5px 0 -5px 0;            
+}

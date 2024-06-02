@@ -1,0 +1,30 @@
+Body {
+  font-family: "Als Gorizont";
+}
+
+.TimersPage {
+  background-color: #1a1f23;
+  width: 270px;
+  height: 290px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  
+}
+
+.TopPanel {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 25px 0 25px;
+  margin-bottom: 10px;
+}
+
+.Body {
+  height: 85%;
+  padding: 0 25px 0 25px;
+}
+
+@font-face {
+  font-family: "Als Gorizont";
+  src: url("../../fonts/als-gorizont-extrabold-expanded.otf");
+}

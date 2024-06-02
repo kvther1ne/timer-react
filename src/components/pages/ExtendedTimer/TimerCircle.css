@@ -1,0 +1,23 @@
+/* 
+   * Add the center and the radius using the size 
+   * and `stroke-width` values.
+   */
+.svg-indicator-indication {
+  fill: transparent;
+  stroke-width: 5px;
+}
+
+.svg-indicator-indication {
+  stroke: #29a354;
+}
+
+.Timer {
+  position: relative;
+}
+
+.Test {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
