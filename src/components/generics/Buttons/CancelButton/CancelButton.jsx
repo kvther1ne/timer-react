@@ -1,10 +1,10 @@
 import "../Button.css"
 import "./CancelButton.css"
 
-function CancelButton() {
+function CancelButton({onClick}) {
   return (
     <>
-      <input type="button" value="Отмена" className="Button CancelButton"/>
+      <input type="button" onClick={onClick} value="Отмена" className="Button CancelButton"/>
     </>
   );
 }

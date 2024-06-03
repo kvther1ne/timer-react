@@ -1,12 +1,17 @@
 // actions.js
 import {
     ADD_TIMER, REMOVE_TIMER, START_TIMER, STOP_TIMER,
-    RESET_TIMER, UPDATE_TIMER, SET_TIMERS
+    RESET_TIMER, UPDATE_TIMER, SET_TIMERS, TICK_TIMER
   } from './timerActionTypes';
   
-  export const addTimer = (id, duration, callback) => ({
+  export const addTimer = (id, duration, callback, onChange) => ({
     type: ADD_TIMER,
-    payload: { id, duration, callback },
+    payload: { id, duration, callback, onChange },
+  });
+
+  export const tickTimer = (id) => ({
+    type: TICK_TIMER,
+    payload: { id },
   });
   
   export const removeTimer = (id) => ({

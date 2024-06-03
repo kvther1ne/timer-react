@@ -14,6 +14,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <Routes>
         <Route path="/" element={<TimersPage />} />
         <Route path="/editor" element={<TimerEditor />} />
+        <Route path="/extendedTimer" element={<ExtendedTimer />} />
       </Routes>
     </BrowserRouter>
   </Provider>,

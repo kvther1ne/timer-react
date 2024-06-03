@@ -5,3 +5,4 @@ export const STOP_TIMER = 'STOP_TIMER';
 export const RESET_TIMER = 'RESET_TIMER';
 export const UPDATE_TIMER = 'UPDATE_TIMER';
 export const SET_TIMERS = 'SET_TIMERS';
+export const TICK_TIMER = 'TICK_TIMER'

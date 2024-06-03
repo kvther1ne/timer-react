@@ -1,10 +1,27 @@
-# React + Vite
+# Таймер React
 
-react-timer SPA
+Аналог таймера в iOS/Android на React с возможностью создавать бесконечное количество таймеров, добавлять и удалять их, запускать по отдельности, а также запускать, ставить на паузу и сбрасывать сразу все таймеры.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Технологии
+* React 18.2.0
+* Redux 5.0.1
+* Vite 5.2.0
 
-Currently, two official plugins are available:
+## Использование
+1. Установите приложение:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+```
+git clone https://github.com/kvther1ne/react-timer.git
+cd react-timer
+```
+
+2. Установите пакеты:
+```
+npm install
+```
+
+3. Запустите:
+
+```
+npm run dev
+```

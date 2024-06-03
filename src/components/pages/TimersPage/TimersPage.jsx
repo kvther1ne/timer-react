@@ -3,10 +3,12 @@ import SettingButton from "../../generics/SettingButton/SettingButton.jsx";
 import AddButton from "../../generics/AddButton/AddButton.jsx";
 import MainStructure from "../../generics/MainStructure/MainStructure.jsx";
 import { toggleEdit } from "../../../store/UI/uiActions.js";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 function TimersPage() {
   const dispatch = useDispatch();
+  const isEditing = useSelector((state) => state.ui.isEditing);
+  
   const toggleEditMode = () => 
   {
     dispatch(toggleEdit());
@@ -15,7 +17,7 @@ function TimersPage() {
   return (
     <div className="TimersPage">
       <div className="TopPanel">
-        <SettingButton label={"Править"} onClick={toggleEditMode}/>
+        <SettingButton label={(isEditing ? "Готово" : "Править")} onClick={toggleEditMode}/>
         <AddButton />
       </div>
 

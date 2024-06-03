@@ -3,7 +3,7 @@ class TimerManager {
     this.timers = {};
   }
 
-  addTimer(id, duration, callback) {
+  addTimer(id, duration, callback, onChange) {
     if (this.timers[id]) {
       throw new Error(`Timer with id ${id} already exists.`);
     }
@@ -11,6 +11,7 @@ class TimerManager {
       id,
       duration,
       callback,
+      onChange,
       remaining: duration,
       active: false,
       interval: null,
@@ -34,6 +35,7 @@ class TimerManager {
     timer.active = true;
     timer.interval = setInterval(() => {
       timer.remaining -= 1000;
+      timer.onChange();
       if (timer.remaining <= 0) {
         this.stopTimer(id);
         timer.callback();

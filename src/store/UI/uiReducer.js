@@ -1,7 +1,8 @@
 import {
     CHANGE_MINUTES,
     CHANGE_SECONDS,
-    TOGGLE_EDIT
+    TOGGLE_EDIT,
+    DISABLE_EDIT
 } from './uiActionTypes';
 
 
@@ -17,6 +18,11 @@ const uiReducer = (state = initialState, action) => {
             return {
                 ...state,
                 isEditing: !state.isEditing,
+            };
+        case DISABLE_EDIT:
+            return {
+                ...state,
+                isEditing: action.payload.isEditing,
             };
         case CHANGE_MINUTES:
             return {

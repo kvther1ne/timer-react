@@ -1,17 +1,13 @@
 import "./TimerLine.css";
 import TimerTitle from "./TimerTitle";
 import SideButton from "./SideButton";
-import store from "../../../store/store";
 import React from "react";
 import RemoveButton from "../RemoveButton/RemoveButton";
 import RightButton from "../RemoveButton/RightButton";
+import { useSelector } from "react-redux";
 
-function TimerLine({duration}) {
-  const [isEditing, toggleEditing] = React.useState(false);
-
-  store.subscribe(() => {
-    toggleEditing(store.getState().ui.isEditing);
-  });
+function TimerLine({duration, id}) {
+  const isEditing = useSelector((state) => state.ui.isEditing)
 
   if (!isEditing) {
     return (
@@ -19,12 +15,12 @@ function TimerLine({duration}) {
         <div className="TimerLine">
           <div className="Left">
             <div className="Time">
-              <TimerTitle duration={duration}/>
+              <TimerTitle id={id} duration={duration}/>
             </div>
           </div>
 
           <div className="ButtonStart">
-            <SideButton />
+            <SideButton id={id} />
           </div>
           <hr className="lineBetween"></hr>
         </div>
@@ -36,10 +32,10 @@ function TimerLine({duration}) {
         <div className="TimerLine">
           <div className="Left">
             <div className="Remove">
-              <RemoveButton />
+              <RemoveButton id={id}/>
             </div>
             <div className="Time">
-              <TimerTitle duration={duration}/>
+              <TimerTitle id={id} duration={duration}/>
             </div>
           </div>
           <div className="Right">

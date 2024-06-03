@@ -12,7 +12,7 @@ function MainStructure() {
         <div className="title">Таймеры</div>
         <hr className="line"></hr>
         {Object.keys(timers).map((id) => (
-          <TimerLine key={id} duration={timers[id].duration}/>
+          <TimerLine key={id} id={id} duration={timers[id].duration}/>
         ))}
       </div>
     </>

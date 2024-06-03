@@ -1,7 +1,7 @@
 // reducer.js
 import {
   ADD_TIMER, REMOVE_TIMER, START_TIMER, STOP_TIMER,
-  RESET_TIMER, UPDATE_TIMER, SET_TIMERS
+  RESET_TIMER, UPDATE_TIMER, SET_TIMERS, TICK_TIMER
 } from './timerActionTypes';
 
 import TimerManager from '../../logic/TimerManager';
@@ -16,7 +16,7 @@ const timerReducer = (state = initialState, action) => {
 
   switch (action.type) {
     case ADD_TIMER:
-      timerManager.addTimer(action.payload.id, action.payload.duration, action.payload.callback);
+      timerManager.addTimer(action.payload.id, action.payload.duration, action.payload.callback, action.payload.onChange);
       return {
         ...state,
         timers: { ...timerManager.getAllTimers() },
@@ -55,6 +55,11 @@ const timerReducer = (state = initialState, action) => {
       return {
         ...state,
         timers: action.payload.timers,
+      };
+    case TICK_TIMER:
+      return {
+        ...state,
+        timers: { ...timerManager.getAllTimers() },
       };
     default:
       return state;
